@@ -1,0 +1,17 @@
+.index__body__right-side--content--top--article
+  =image_tag 'news_sample4.jpeg' , class:"top"
+  .middle
+    %h2 TikTokのByteDanceが世界最大のスタートアップに――Ube
+    %p 時事通信社
+    %p 12時間前
+  .bottom.clearfix
+    =image_tag 'user.png' ,class:"user"
+    .about-user
+      %p.about-user--name 田中 太郎
+      %p.about-user--position 経済評論家
+      %p.about-user--comment 我が国主導で纏めたTPP１１が、高い理想を掲げたTPPの理念を原則的に引き継いで発効することは間違いなく良いことで、よく頑張
+    - @users.each do |user|
+      = image_tag 'user.png', class:"users"
+    .picks
+      %p.picks-count 873
+      %p.picks-char Picks
