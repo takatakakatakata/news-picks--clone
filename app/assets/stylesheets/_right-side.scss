@@ -1,0 +1,39 @@
+.index__body__right-side{
+  overflow:scroll;
+  float:right;
+  width:calc(100vw - #{$left-side-bar-width} );
+  height:680px;
+  padding:50px 0 0 0;
+  background:#eeeeee;
+  &--head{
+    @include clearfix;
+    display: flex;
+    &--main{
+      float:left;
+      width:66.8%;
+      height:calc(26px + 25vw);
+      min-height:256px;
+      min-width:530px;
+      border-right:1px white solid;
+    }
+    &--sub{
+      float:right;
+      padding:0;
+      margin:0;
+      line-height:0.8;
+      width:calc(33.2% - 1px);
+      &--top{
+        height:calc(13px + 12.5vw);
+        width:100%;
+        min-height:128px;
+        min-width:280px;
+      }
+      &--bottom{
+        width:100%;
+        height:calc(13px + 12.5vw);
+        min-height:128px;
+        min-width:280px;
+      }
+    }
+  }
+}
