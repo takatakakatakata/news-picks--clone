@@ -1,0 +1,124 @@
+.index__body__left-side{
+  position:fixed;
+  width: $left-side-bar-width;
+  height:700px;
+  padding:50px 0 0 0;
+  float:left;
+  &--user{
+    height:146px;
+    border-bottom:1px solid gray;
+  }
+  &--follow{
+    height:52px;
+    border-bottom:1px solid gray;
+  }
+  &--my-news{
+    height:42px;
+    border-bottom:1px solid gray;
+    p{
+      font-size:12px;
+      font-weight:bold;
+      padding:13px 0 0 12px;
+      float:left;
+    }
+    .my-news--icon{
+      padding:13px 0 0 100px;
+      float:left;
+    }
+  }
+  &--bottom{
+    height:429px;
+    overflow:scroll;
+    &--article{
+      &--content{
+        padding:10px 0 0 0;
+        margin:0 auto;
+        width:180px;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
+.left-side--bottom--article{
+  &--title{
+    margin:0 0 14px 0;
+    span{
+      font-size:12px;
+      color:gray;
+    }
+    .theme{
+      font-weight:bold;
+      color:black;
+    }
+  }
+  &--user{
+    @include clearfix;
+    .user-icon{
+      float:left;
+      width:30px;
+    }
+    &--about{
+      float:left;
+      font-size:12px;
+      line-height:1;
+      margin:0 0 0 6px;
+      .user-name{
+        font-weight:bold;
+      }
+      .transmit-ago{
+        color:gray;
+        padding:6px 0 0 0;
+      }
+    }
+  }
+  &--content{
+    p{
+      font-size:12px;
+      font-weight:bold;
+      word-break:break-all;
+      line-height:1.4;
+      margin:10px 0 0 0;
+    }
+    padding:0 0 18px 0;
+  }
+}
+.user--top{
+  &--icon{
+    width:50px;
+    margin:24px 0 2px 84px;
+  }
+  &--name{
+    text-align:center;
+    font-size:13.8px;
+    font-weight:bold;
+  }
+}
+.follow-wrapper{
+  width:60px;
+  float:left;
+  margin:10px 0 0 22px;
+  text-align:center;
+  .counter{
+    font-size:16px;
+    font-weight:bolder;
+    text-align:center;
+  }
+  .follow{
+    font-size:8px;
+    line-height:0.8;
+  }
+}
+.follower-wrapper{
+  width:60px;
+  float:left;
+  margin:10px 0 0 52px;
+  text-align:center;
+  .counter{
+    font-size:16px;
+    font-weight:bolder;
+  }
+  .follow{
+    font-size:8px;
+    line-height:0.8;
+  }
+}
