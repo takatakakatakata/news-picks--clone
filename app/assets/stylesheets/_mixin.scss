@@ -1,0 +1,14 @@
+@mixin clearfix() {
+  &:after {
+    content:"";
+    clear:both;
+    display:block;
+  }
+}
+@mixin search_field_placeholder {
+  &::placeholder {
+    font-weight:300;
+    color:white;
+    font-size:14px;
+  }
+}
