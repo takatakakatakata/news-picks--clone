@@ -1,0 +1,18 @@
+.index__header
+  .index__header--list-icon
+    =image_tag 'list-icon', class:"header_list-icon"
+  .index__header--search
+    =image_tag 'search.png',class:"header_search-icon"
+    %input{type:"text" ,placeholder:"検索する",class:"search_field",maxlength:"200"}
+  .index__header--logo
+    =image_tag 'newspicks_logo', class:"header_logo"
+  .index__header--user
+    =image_tag 'user.png' , class:"header_user-icon"
+    .index__header--user--wrapper
+      %p.name 田中 太郎
+      %p.member 無料会員
+      %i.fa.fa-caret-down
+  .index__header--flag
+    =image_tag 'flag.png' , class:"header_flag-icon"
+  .index__header--pen
+    =image_tag 'pen.png' , class:"header_pen-icon"
