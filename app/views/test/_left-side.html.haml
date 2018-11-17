@@ -1,0 +1,18 @@
+.index__body__left-side
+  .index__body__left-side--user
+    =image_tag 'user.png' ,class:"user--top--icon"
+    %p.user--top--name user name
+  .index__body__left-side--follow
+    .follow-wrapper
+      .counter 1
+      .follow フォロー
+    .space
+    .follower-wrapper
+      .counter 0
+      .follow フォロワー
+  .index__body__left-side--my-news
+    %p マイニュース
+    %i.fa.fa-angle-right.fa-lg.my-news--icon
+  .index__body__left-side--bottom
+    -newcomments.each do |newcomment|
+      =render partial:"article" ,local:{newcomment: newcomment}

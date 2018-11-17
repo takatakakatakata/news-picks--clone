@@ -1,0 +1,161 @@
+.index__body__right-side
+  .index__body__right-side--head.clearfix
+    =image_tag 'news_sample1.jpeg',class:"index__body__right-side--head--main"
+    .index__body__right-side--head--sub
+      =image_tag 'news_sample2.png',class:"index__body__right-side--head--sub--top"
+      =image_tag 'news_sample3.jpeg',class:"index__body__right-side--head--sub--bottom"
+  .index__body__right-side--content
+    .index__body__right-side--content--top
+      .index__body__right-side--content--top--new-article
+        .index__body__right-side--content--top--new-article--head 新着ニュース
+        -@new_articles.each do |new_article|
+          .new-article
+            .new-article__content
+              .new-article__content--title Waymo、カリフォルニアでも完全無人の自動運
+              .wrapper
+                %p 共同通信
+                %p 12時間前
+      - @articles.each do |article|
+        = render partial:"article-right-side"
+
+    .index__body__right-side--content--middle
+      %a{href:"#"}
+        = image_tag 'banner.png', class:"index-banner"
+
+    .index__body__right-side--content--theme.clearfix
+      %h3 テクノロジー
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p テクノロジー
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 ビジネス
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p ビジネス
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 政治・経済
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p 政治・経済
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 金融・マーケット
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p 金融・マーケット
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 キャリア・教育
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p キャリア・教育
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 社会・スポーツ
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p 社会・スポーツ
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+    .index__body__right-side--content--theme.clearfix
+      %h3 ジョブオファー
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p ジョブオファー
+          %p 一覧を見る
+      .index__body__right-side--content--theme--article-wrapper
+        - @each_articles.each do |article|
+          = render partial:"article-right-side"
+
+    .index__body__right-side--content--theme.clearfix
+      %h3 ユーザーランキング
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p ユーザーランキング
+          %p 一覧を見る
+      .index__body__right-side--content--theme--user-wrapper
+        - @ranking_users.each_with_index do |user , index|
+          .user.clearfix
+            .ranking #{index + 1}
+            .user-wrapper.clearfix
+              =image_tag 'user.png' , class:"user-wrapper--icon"
+              .about-user
+                .about-user--name 田中太郎
+                .about-user--position ハーバード大学教授
+                .about-user--liked-user-count 週間 Liked ユーザー数:
+                .about-user--liked-user-num 111
+            .follow フォローする
+
+    .index__body__right-side--content--theme.clearfix
+      %h3 コメントランキング
+      .index__body__right-side--content--theme--wrapper
+        %a{href:"#"}
+          %p コメントランキング
+          %p 一覧を見る
+      .index__body__right-side--content--theme--comment-wrapper
+        - @comment_users.each_with_index do |commnet ,index|
+          .user
+            .banner.clearfix
+              .num #{index + 1}
+              .wrapper
+                .tri
+            = image_tag 'user.png',class:"user--icon"
+            .user--about
+              .user--about--name 古畑任三郎
+              .user--about--position 作家・ジャーナリスト
+            .user--likes
+              .user--likes--count 360
+              .user--likes--char Likes
+            .user--follow フォローする
+            .user--content
+              .user--content--top
+                %p 日本はいつからこれほど民間事業に政治介入するようになったのか。携帯料金への介入といいこれでは投資家から見たら隣の国よりもカントリーリスクの大きな国として敬遠される日も…
+              .user--content--bottom
+                %a{href:"#"}
+                  .article-title 消費増税での還元、カード手数料上限３・２５％
+                .paper 読売新聞
+
+  .index__body__right-side--footer
+    .index__body__right-side--footer--box
+      %p NewsPicks について 
+      %p 利用規約 
+      %p コンテンツの利用について 
+      %p 個人情報保護方針 
+      %p 広告掲載
+    .index__body__right-side--footer--box
+      %a{href:"#"}
+        = image_tag "twitter",class:"footer--icon"
+      %a{href:"#"}
+        = image_tag "facebook",class:"footer--icon"
+    .index__body__right-side--footer--box
+      .footer--button
+        .fa.fa-twitter.footer--button--icon
+        %p ツイート
+      .footer--button
+        .fa.fas.fa-thumbs-up.footer--button--icon
+        %p いいね !
+    .index__body__right-side--footer--box
+      .wrapper
+        %a{href:"#"}
+          = image_tag "app_store" ,class:"store-icon"
+        %a{href:"#"}
+          = image_tag "google_play" ,class:"store-icon"
