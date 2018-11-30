@@ -22,69 +22,16 @@
       %a{href:"#"}
         = image_tag 'banner.png', class:"index-banner"
 
-    .index__body__right-side--content--theme.clearfix
-      %h3 テクノロジー
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p テクノロジー
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 ビジネス
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p ビジネス
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 政治・経済
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p 政治・経済
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 金融・マーケット
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p 金融・マーケット
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 キャリア・教育
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p キャリア・教育
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 社会・スポーツ
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p 社会・スポーツ
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
-    .index__body__right-side--content--theme.clearfix
-      %h3 ジョブオファー
-      .index__body__right-side--content--theme--wrapper
-        %a{href:"#"}
-          %p ジョブオファー
-          %p 一覧を見る
-      .index__body__right-side--content--theme--article-wrapper
-        - @each_articles.each do |article|
-          = render partial:"article-right-side"
+    - ["テクノロジー" , "ビジネス" , "政治・経済" , "金融・マーケット" , "キャリア・教育" , "社会・スポーツ" , "ジョブオファー"].each do |theme|
+      .index__body__right-side--content--theme.clearfix
+        %h3 #{theme}
+        .index__body__right-side--content--theme--wrapper
+          %a{href:"#"}
+            %p #{theme}
+            %p 一覧を見る
+        .index__body__right-side--content--theme--article-wrapper
+          - @each_articles.each do |article|
+            = render partial:"article-right-side"
 
     .index__body__right-side--content--theme.clearfix
       %h3 ユーザーランキング
@@ -136,10 +83,10 @@
 
   .index__body__right-side--footer
     .index__body__right-side--footer--box
-      %p NewsPicks について 
-      %p 利用規約 
-      %p コンテンツの利用について 
-      %p 個人情報保護方針 
+      %p NewsPicks について
+      %p 利用規約
+      %p コンテンツの利用について
+      %p 個人情報保護方針
       %p 広告掲載
     .index__body__right-side--footer--box
       %a{href:"#"}
