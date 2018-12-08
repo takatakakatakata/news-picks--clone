@@ -1,0 +1,2 @@
+class FinancialMarketController < ApplicationController
+end

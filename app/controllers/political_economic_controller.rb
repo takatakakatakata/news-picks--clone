@@ -1,0 +1,2 @@
+class PoliticalEconomicController < ApplicationController
+end

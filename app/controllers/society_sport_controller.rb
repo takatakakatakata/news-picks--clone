@@ -1,0 +1,2 @@
+class SocietySportController < ApplicationController
+end
